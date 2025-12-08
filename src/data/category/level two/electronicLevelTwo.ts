@@ -1,44 +1,20 @@
 export const electronicLevelTwo = [
   {
-    name: 'topWear',
-    categoryId: 'men_topWear',
-    parentCategoryId: 'men',
+    name: 'Shaving (Cạo râu)',
+    categoryId: 'care_shaving',
+    parentCategoryId: 'care',
     level: 2,
   },
   {
-    name: 'bottomWear',
-    categoryId: 'men_bottomWear',
-    parentCategoryId: 'men',
+    name: 'Body Care (Chăm sóc cơ thể)',
+    categoryId: 'care_body',
+    parentCategoryId: 'care',
     level: 2,
   },
   {
-    name: 'innerWear_and_sleepwear',
-    categoryId: 'men_innerWear_and_sleepwear',
-    parentCategoryId: 'men',
-    level: 2,
-  },
-  {
-    name: 'footwear',
-    categoryId: 'men_footwear',
-    parentCategoryId: 'men',
-    level: 2,
-  },
-  {
-    name: 'accessories',
-    categoryId: 'men_accessories',
-    parentCategoryId: 'men',
-    level: 2,
-  },
-  {
-    name: 'sportswear',
-    categoryId: 'men_sportswear',
-    parentCategoryId: 'men',
-    level: 2,
-  },
-  {
-    name: 'formalWear',
-    categoryId: 'men_formalWear',
-    parentCategoryId: 'men',
+    name: 'Fragrance (Nước hoa)',
+    categoryId: 'care_fragrance',
+    parentCategoryId: 'care',
     level: 2,
   },
 ];

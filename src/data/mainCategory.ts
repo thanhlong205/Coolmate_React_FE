@@ -1,25 +1,25 @@
-import CategoryGrid from '../customer/pages/Home/CategoryGrid/CategoryGrid';
-import { Level } from './../../node_modules/html-entities/dist/commonjs/index.d';
 export const mainCategory = [
   {
     name: 'Men',
-    CategoryId: 'men',
+    categoryId: 'men', // Đã sửa thành chữ c thường
     level: 1,
+    // Dữ liệu levelTwoCategory ở đây chỉ để tham khảo hoặc dùng cho mobile menu.
+    // Navbar desktop sẽ dùng dữ liệu từ file menLevelTwo.js riêng.
     levelTwoCategory: [
       {
-        name: 'Áo Thun Nam',
-        categoryId: 'men_topWear',
+        name: 'Top Wear',
+        categoryId: 'men_topWear', // ID khớp với file menLevelTwo
         parentCategoryId: 'men',
         level: 2,
       },
       {
-        name: 'BottomWear',
-        categoryId: 'menBottomWear',
+        name: 'Bottom Wear',
+        categoryId: 'men_bottomWear',
         parentCategoryId: 'men',
         level: 2,
       },
       {
-        name: 'Áo Sơ Mi Nam',
+        name: 'Innerwear',
         categoryId: 'men_innerWear_and_sleepwear',
         parentCategoryId: 'men',
         level: 2,
@@ -33,32 +33,73 @@ export const mainCategory = [
     ],
   },
   {
-    name: 'women',
+    name: 'Women',
     categoryId: 'women',
-    Level: 1,
+    level: 1,
     levelTwoCategory: [
       {
+        name: 'Top Wear',
+        categoryId: 'women_topWear',
         parentCategoryId: 'women',
         level: 2,
-        name: 'Indian & Fusion Wear',
-        categoryId: 'women_indian_and_fusion_wear',
       },
       {
+        name: 'Bottom Wear',
+        categoryId: 'women_bottomWear',
         parentCategoryId: 'women',
         level: 2,
-        name: 'Western Wear',
-        categoryId: 'women_western_wear',
+      },
+      {
+        name: 'Innerwear',
+        categoryId: 'women_innerWear_and_sleepwear',
+        parentCategoryId: 'women',
+        level: 2,
       },
     ],
   },
   {
-    name: 'Home & Furniture',
-    categoryId: 'home_and_furniture',
+    name: 'Kids',
+    categoryId: 'kids',
     level: 1,
+    levelTwoCategory: [
+      {
+        name: 'Boys',
+        categoryId: 'kids_boys',
+        parentCategoryId: 'kids',
+        level: 2,
+      },
+      {
+        name: 'Girls',
+        categoryId: 'kids_girls',
+        parentCategoryId: 'kids',
+        level: 2,
+      },
+    ],
   },
   {
-    name: 'Electronics',
-    categoryId: 'electronics',
+    name: 'CM24 (Care)',
+    categoryId: 'care', // Danh mục Chăm sóc cá nhân
     level: 1,
+    levelTwoCategory: [
+      {
+        name: 'Shaving',
+        categoryId: 'care_shaving',
+        parentCategoryId: 'care',
+        level: 2,
+      },
+    ],
+  },
+  {
+    name: 'C&S',
+    categoryId: 'cs', // ID ngắn gọn để map dữ liệu
+    level: 1,
+    levelTwoCategory: [
+      {
+        name: 'Programs',
+        categoryId: 'cs_programs',
+        parentCategoryId: 'cs',
+        level: 2,
+      },
+    ],
   },
 ];

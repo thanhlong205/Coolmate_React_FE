@@ -1,44 +1,46 @@
 export const electronicLevelThree = [
   {
-    name: 'topWear',
-    categoryId: 'men_topWear',
-    parentCategoryName: 'topWear',
-    parentCategoryId: 'men',
+    name: 'Razors (Dao cạo râu)',
+    categoryId: 'care_razors',
+    parentCategoryId: 'care_shaving',
   },
   {
-    name: 'bottomWear',
-    categoryId: 'men_bottomWear',
-    parentCategoryName: 'bottomWear',
-    parentCategoryId: 'men',
+    name: 'Shaving Gel (Bọt cạo râu)',
+    categoryId: 'care_shaving_gel',
+    parentCategoryId: 'care_shaving',
   },
   {
-    name: 'innerWear_and_sleepwear',
-    categoryId: 'men_innerWear_and_sleepwear',
-    parentCategoryName: 'innerWear_and_sleepwear',
-    parentCategoryId: 'men',
+    name: 'Blade Refills (Lưỡi dao thay thế)',
+    categoryId: 'care_blades',
+    parentCategoryId: 'care_shaving',
+  },
+
+  // --- Chăm sóc cơ thể ---
+  {
+    name: 'Body Wash (Sữa tắm)',
+    categoryId: 'care_body_wash',
+    parentCategoryId: 'care_body',
   },
   {
-    name: 'footwear',
-    categoryId: 'men_footwear',
-    parentCategoryName: 'footwear',
-    parentCategoryId: 'men',
+    name: 'Shampoo (Dầu gội)',
+    categoryId: 'care_shampoo',
+    parentCategoryId: 'care_body',
   },
   {
-    name: 'accessories',
-    categoryId: 'men_accessories',
-    parentCategoryName: 'accessories',
-    parentCategoryId: 'men',
+    name: 'Face Wash (Sữa rửa mặt)',
+    categoryId: 'care_face_wash',
+    parentCategoryId: 'care_body',
+  },
+
+  // --- Nước hoa ---
+  {
+    name: 'Perfume (Nước hoa nam)',
+    categoryId: 'care_perfume',
+    parentCategoryId: 'care_fragrance',
   },
   {
-    name: 'sportswear',
-    categoryId: 'men_sportswear',
-    parentCategoryName: 'sportswear',
-    parentCategoryId: 'men',
-  },
-  {
-    name: 'formalWear',
-    categoryId: 'men_formalWear',
-    parentCategoryName: 'formalWear',
-    parentCategoryId: 'men',
+    name: 'Body Mist (Xịt thơm toàn thân)',
+    categoryId: 'care_bodymist',
+    parentCategoryId: 'care_fragrance',
   },
 ];

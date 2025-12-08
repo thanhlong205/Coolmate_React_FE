@@ -1,44 +1,47 @@
-export const furnitureLevelThree = [
+export const kidsLevelThree = [
+  // --- BÉ TRAI (Boys) ---
   {
-    name: 'topWear',
-    categoryId: 'men_topWear',
-    parentCategoryId: 'men',
-    level: 2,
+    name: 'T-Shirts (Áo thun)',
+    categoryId: 'kids_boys_tshirts',
+    parentCategoryId: 'kids_boys',
   },
   {
-    name: 'bottomWear',
-    categoryId: 'men_bottomWear',
-    parentCategoryId: 'men',
-    level: 2,
+    name: 'Shorts (Quần đùi)',
+    categoryId: 'kids_boys_shorts',
+    parentCategoryId: 'kids_boys',
   },
   {
-    name: 'innerWear_and_sleepwear',
-    categoryId: 'men_innerWear_and_sleepwear',
-    parentCategoryId: 'men',
-    level: 2,
+    name: 'Sets (Đồ bộ)',
+    categoryId: 'kids_boys_sets',
+    parentCategoryId: 'kids_boys',
+  },
+
+  // --- BÉ GÁI (Girls) ---
+  {
+    name: 'Dresses (Váy đầm)',
+    categoryId: 'kids_girls_dresses',
+    parentCategoryId: 'kids_girls',
   },
   {
-    name: 'footwear',
-    categoryId: 'men_footwear',
-    parentCategoryId: 'men',
-    level: 2,
+    name: 'Tops (Áo kiểu)',
+    categoryId: 'kids_girls_tops',
+    parentCategoryId: 'kids_girls',
   },
   {
-    name: 'accessories',
-    categoryId: 'men_accessories',
-    parentCategoryId: 'men',
-    level: 2,
+    name: 'Leggings',
+    categoryId: 'kids_girls_leggings',
+    parentCategoryId: 'kids_girls',
+  },
+
+  // --- SƠ SINH (Baby) ---
+  {
+    name: 'Bodysuits',
+    categoryId: 'kids_baby_bodysuits',
+    parentCategoryId: 'kids_baby',
   },
   {
-    name: 'sportswear',
-    categoryId: 'men_sportswear',
-    parentCategoryId: 'men',
-    level: 2,
-  },
-  {
-    name: 'formalWear',
-    categoryId: 'men_formalWear',
-    parentCategoryId: 'men',
-    level: 2,
+    name: 'Accessories (Mũ/Yếm)',
+    categoryId: 'kids_baby_accessories',
+    parentCategoryId: 'kids_baby',
   },
 ];

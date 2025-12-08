@@ -15,24 +15,23 @@ const Deal = () => {
     autoplay: true,
     autoplaySpeed: 3000,
 
-    // Cấu hình Responsive (Tự thay đổi số lượng thẻ theo màn hình)
     responsive: [
       {
-        breakpoint: 1024, // Tablet
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768, // Mobile lớn
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 480, // Mobile nhỏ
+        breakpoint: 480,
         settings: {
-          slidesToShow: 1, // Điện thoại nhỏ chỉ hiện 1-1.5 thẻ
+          slidesToShow: 1,
         },
       },
     ],
