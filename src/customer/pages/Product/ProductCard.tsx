@@ -46,7 +46,7 @@ const ProductCard = () => {
             />
           ))}
 
-          {
+          {isHovered && (
             <div className="indicator flex flex-col items-center space-y-2">
               <div className="flex gap-3">
                 <Button
@@ -65,7 +65,7 @@ const ProductCard = () => {
                 </Button>
               </div>
             </div>
-          }
+          )}
         </div>
 
         <div className="details pt-3 space-y-1 group-hover-effect rounded-md">

@@ -8,6 +8,7 @@ import {
   IconButton,
   InputLabel,
   MenuItem,
+  Pagination,
   Select,
   useMediaQuery,
   useTheme,
@@ -18,8 +19,13 @@ const Product = () => {
   const theme = useTheme();
   const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
   const [sort, setSort] = useState();
+  const [page, setPage] = useState(1);
+
   const handleSortChange = (event: any) => {
     setSort(event.target.value);
+  };
+  const handlePageChange = (value: number) => {
+    setPage(value);
   };
   return (
     <div className="-z-10 mt-10">
@@ -71,6 +77,14 @@ const Product = () => {
               <ProductCard />
             ))}
           </section>
+          <div className="flex justify-center py-10">
+            <Pagination
+              onChange={(e, value) => handlePageChange(value)}
+              count={10}
+              variant="outlined"
+              color="primary"
+            />
+          </div>
         </div>
       </div>
     </div>
