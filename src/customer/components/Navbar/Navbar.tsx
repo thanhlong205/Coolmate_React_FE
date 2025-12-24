@@ -15,6 +15,7 @@ import { Storefront } from '@mui/icons-material';
 import { blue } from '@mui/material/colors';
 import CategorySheet from './CategorySheet';
 import { mainCategory } from '../../../data/mainCategory';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const theme = useTheme();
@@ -23,6 +24,7 @@ const Navbar = () => {
   // Mặc định chọn 'men' hoặc rỗng
   const [selectedCategory, setSelectedCategory] = useState('men');
   const [showCategorySheet, setShowCategorySheet] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -38,7 +40,10 @@ const Navbar = () => {
                 <MenuIcon />
               </IconButton>
             )}
-            <h1 className="logo cursor-pointer text-lg md:text-1xl text-primary-color">
+            <h1
+              onClick={() => navigate('/')}
+              className="logo cursor-pointer text-lg md:text-1xl text-primary-color"
+            >
               CoolMate
             </h1>
           </div>
@@ -72,11 +77,12 @@ const Navbar = () => {
           <IconButton>
             <FavoriteBorderIcon sx={{ fontSize: 29 }} />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={() => navigate('/cart')}>
             <AddShoppingCartIcon sx={{ fontSize: 29 }} />
           </IconButton>
           {isLarge && (
             <Button
+              onClick={() => navigate('/become-seller')}
               startIcon={<Storefront />}
               sx={{ bgcolor: 'lightBlue' }}
               variant="outlined"

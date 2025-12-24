@@ -1,8 +1,8 @@
-export const kidsLevelTwo = [
+export const furnitureLevelTwo = [
   {
     name: 'Boys (Bé Trai)',
     categoryId: 'kids_boys',
-    parentCategoryId: 'kids', // ID này phải khớp với 'kids' trong mainCategory
+    parentCategoryId: 'kids',
     level: 2,
   },
   {

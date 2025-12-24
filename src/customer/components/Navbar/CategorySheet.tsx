@@ -8,14 +8,17 @@ import PersonIcon from '@mui/icons-material/Person';
 import { womenLevelTwo } from '../../../data/category/level two/womenLevelTwo';
 import { menLevelTwo } from '../../../data/category/level two/menLevelTwo';
 import { electronicLevelTwo } from '../../../data/category/level two/electronicLevelTwo';
-import { kidsLevelTwo } from '../../../data/category/level two/furnitureLevelTwo';
 
 import { menLevelThree } from '../../../data/category/level three/menLevelThree';
 import { womenLevelThree } from '../../../data/category/level three/womenLevelThree';
 import { electronicLevelThree } from '../../../data/category/level three/electronicLevelThree';
-import { kidsLevelThree } from '../../../data/category/level three/furnitureLevelThree';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { furnitureLevelTwo } from '../../../data/category/level two/furnitureLevelTwo';
+import { furnitureLevelThree } from '../../../data/category/level three/furnitureLevelThree';
 
 const CareShareMenu = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full h-full flex flex-col md:flex-row p-8 gap-10 items-center justify-center bg-gray-50">
       {/* Phần bên trái*/}
@@ -27,7 +30,6 @@ const CareShareMenu = () => {
           nguyện dành cho trẻ em có hoàn cảnh khó khăn."
         </Typography>
 
-        {/* Sơ đồ quy trình */}
         <div className="flex items-center gap-4 my-4 opacity-80 scale-90 md:scale-100">
           <div className="flex flex-col items-center">
             <PersonIcon className="text-blue-600 !text-5xl" />
@@ -84,17 +86,19 @@ const categoryTwo: { [key: string]: any[] } = {
   men: menLevelTwo,
   women: womenLevelTwo,
   care: electronicLevelTwo,
-  kids: kidsLevelTwo,
+  kids: furnitureLevelTwo,
 };
 
 const categoryThree: { [key: string]: any[] } = {
   men: menLevelThree,
   women: womenLevelThree,
   care: electronicLevelThree,
-  kids: kidsLevelThree,
+  kids: furnitureLevelThree,
 };
 
 const CategorySheet = ({ selectedCategory }: any) => {
+  const navigate = useNavigate();
+
   // Hàm lọc
   const childCategory = (category: any, parentCategoryId: any) => {
     if (!category) return [];
@@ -104,7 +108,6 @@ const CategorySheet = ({ selectedCategory }: any) => {
     );
   };
 
-  // Nếu đang chọn C&S, hiển thị component ngay
   if (selectedCategory === 'cs') {
     return (
       <Box
@@ -116,7 +119,6 @@ const CategorySheet = ({ selectedCategory }: any) => {
     );
   }
 
-  // Nếu không phải C&S, hiển thị danh sách dạng lưới như bình thường
   return (
     <Box
       sx={{ zIndex: 2 }}
@@ -139,6 +141,8 @@ const CategorySheet = ({ selectedCategory }: any) => {
                 <ul className="space-y-2">
                   {subItems.map((subItem: any, subIdx: number) => (
                     <li
+                      // navigate bây giờ đã được định nghĩa và sử dụng được
+                      onClick={() => navigate('/products/' + item.categoryId)}
                       key={subIdx}
                       className="text-gray-600 hover:text-black hover:font-medium cursor-pointer transition-colors"
                     >

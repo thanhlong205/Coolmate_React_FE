@@ -1,4 +1,4 @@
-export const kidsLevelThree = [
+export const furnitureLevelThree = [
   // --- BÉ TRAI (Boys) ---
   {
     name: 'T-Shirts (Áo thun)',
